@@ -1,0 +1,22 @@
+{
+  "name": "express-basics",
+  "version": "1.0.0",
+  "description": "Following Treehouse's [Express Basics](https://teamtreehouse.com/library/express-basics-2) course.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anwarmontasir/express-basics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anwarmontasir/express-basics/issues"
+  },
+  "homepage": "https://github.com/anwarmontasir/express-basics#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
