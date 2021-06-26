@@ -8,8 +8,11 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-app.get('/hello', (req, res) => {
-    res.send('<h1>Hello world</h1>');
+app.get('/cards', (req, res) => {
+    res.render('card', {
+        prompt: 'Who put the bomp in the bomp bah bomp bah bomp?', 
+        hint: 'Who put the ram in the ram a lam a ding dong?'
+    });
 });
 
 app.listen(3000, () => {
