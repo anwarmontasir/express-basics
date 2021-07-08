@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 
 app.get('/cards', (req, res) => {
     res.render('card', {
-        prompt: 'Who put the bomp in the bomp bah bomp bah bomp?', 
+        prompt: 'Who put the bomp in the bomp bah bomp bah bomp?',
         hint: 'Who put the ram in the ram a lam a ding dong?'
     });
 });
