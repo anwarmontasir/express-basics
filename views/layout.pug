@@ -4,8 +4,6 @@ html(lang="en")
     title Flash Cards
     meta(name="viewport" content="width=device-width, initial-scale=1")
   body
-    header
-      h1 Flash Cards
-      block content
-    footer    
-      p An app to help you study 
+    include includes/header.pug
+    block content
+    include includes/footer.pug
