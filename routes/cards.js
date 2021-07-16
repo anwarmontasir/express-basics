@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
+const { data } = require('../data/flashcardData.json');
+const { cards } = data;
 
-router.get('/', (req, res) => {
+router.get('/:id', (req, res) => {
     res.render('card', {
-        prompt: 'Who put the bomp in the bomp bah bomp bah bomp?',
-        hint: 'Who put the ram in the ram a lam a ding dong?'
+        prompt: cards[req.params.id].question,
+        hint: cards[req.params.id].hint
     });
 });
 
