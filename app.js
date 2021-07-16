@@ -9,46 +9,9 @@ app.use(cookieParser());
 
 app.set('view engine', 'pug');
 
-// app.use((req, res, next) => {
-//     const err = new Error('oh no');
-//     err.status = 500;
-//     next(err);
-// })
+const routes = require('./routes');
 
-app.get('/', (req, res) => {
-    const name = req.cookies.username;
-    if (name) {
-        res.render('index', {name});
-    } else {
-        res.redirect('/hello');
-    }
-});
-
-app.get('/cards', (req, res) => {
-    res.render('card', {
-        prompt: 'Who put the bomp in the bomp bah bomp bah bomp?',
-        hint: 'Who put the ram in the ram a lam a ding dong?'
-    });
-});
-
-app.get('/hello', (req, res) => {
-    const name = req.cookies.username;
-    if (name) {
-        res.redirect('/');
-    } else {
-        res.render('hello');
-    }
-})
-
-app.post('/hello', (req, res) => {
-    res.cookie('username', req.body.username);
-    res.redirect('/');
-})
-
-app.post('/goodbye', (req, res) => {
-    res.clearCookie('username');
-    res.redirect('/hello');
-})
+app.use(routes);
 
 app.use((req, res, next) => {
     const err = new Error('Not Found');
